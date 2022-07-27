@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #primary_nav_wrap {
+        margin-top: 15px
+    }
+
+    #primary_nav_wrap ul {
+        list-style: none;
+        position: relative;
+        float: left;
+        margin: 0;
+        padding: 0
+    }
+
+    #primary_nav_wrap ul a {
+        display: block;
+        color: #333;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 32px;
+        padding: 0 15px;
+        font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif
+    }
+
+    #primary_nav_wrap ul li {
+        position: relative;
+        float: left;
+        margin: 0;
+        padding: 0
+    }
+
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: "Open Sans", sans-serif;
+        color: #666;
+    }
+
+    /* STRUCTURE */
+
+    .wrapper {
+        padding: 5px;
+        max-width: 960px;
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    header {
+        padding: 0 15px;
+    }
+
+    .columns {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        margin: 5px 0;
+    }
+
+    .column {
+        flex: 1;
+        border: 1px solid gray;
+        margin: 2px;
+        padding: 10px;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    footer {
+        padding: 0 15px;
+    }
+</style>
+
+<body>
+    <h1>Menu</h1>
+    <nav id="primary_nav_wrap">
+        <ul>
+            <li class="current-menu-item"><a href="#">Home</a></li>
+            <li><a href="#">Menu 1</a></li>
+            <li><a href="#">Menu 2</a></li>
+            <li><a href="#">Menu 3</a></li>
+            <li><a href="#">Menu 4</a></li>
+            <li><a href="#">Menu 5</a></li>
+            <li><a href="#">Menu 6</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+    <br>
+    <br>
+    <div class="wrapper">
+        <header>
+            <h1>Gran Documento</h1>
+        </header>
+        <section class="columns">
+            <div class="column">
+                <h2>Informacion #!</h2>
+                <p>Aquí se encuentra toda la información de la primera parte</p>
+            </div>
+
+            <div class="column">
+                <h2>Informacion #2</h2>
+                <p>Kevin Alejandro González Rivas
+                    <br>
+                    0901-19-76
+                    <br>
+                    26/07/2022.</p>
+            </div>
+
+            <div class="column">
+                <h2>Informacion #3</h2>
+                <p>Aquí se encuentra toda la información de la primera parte</p>
+            </div>
+        </section>
+        <footer>
+            <h3>Footer</h3>
+            <p>Formas de contactarnos puedes hacer por medio de:
+                <br>
+                prueba@pueba.com
+                <br>
+                      +502 55447711
+            </p>
+        </footer>
+    </div>
+
+</body>
+
+</html>
