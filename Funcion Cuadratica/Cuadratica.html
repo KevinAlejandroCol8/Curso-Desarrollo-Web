@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Ecuación cuadrática</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script>
+        function algoritmo() {
+            let a, b, c, raiz, x1;
+            let x2;
+            a = parseFloat(document.formulario1.a.value);
+            b = parseFloat(document.formulario1.b.value);
+            c = parseFloat(document.formulario1.c.value);
+            raiz = b * b - 4.0 * a * c;
+            if (raiz < 0) {
+                raiz = -raiz;
+                //alert('Soluciones imaginarias');
+            }
+            if (a != 0) {
+                x1 = (-b + Math.sqrt(raiz)) / 2.0 / a;
+                x2 = (-b - Math.sqrt(raiz)) / 2.0 / a;
+            }
+            else {
+                x1 = 0;
+                x2 = 0;
+                alert('No es una ecuaci\u00F3n cuadr\u00E1tica');
+            }
+            document.formulario1.raiz.value = raiz;
+            document.formulario1.x1.value = x1;
+            document.formulario1.x2.value = x2;
+        }
+
+    </script>
+</head>
+
+<body>
+    <form name="formulario1">
+        <table style="text-align: left; margin-left: auto; margin-right: auto;">
+            <tbody>
+                <tr>
+                    <td>
+                        <label for="a">valor de a:</label>
+                    </td>
+                    <td>
+                        <input name="a" required="required" step="0.000001" type="number" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="b">valor de b:</label>
+                    </td>
+                    <td>
+                        <input name="b" required="required" step="0.000001" type="number" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="c">valor de c:</label>
+                    </td>
+                    <td>
+                        <input name="c" required="required" step="0.000001" type="number" />
+                    </td>
+                </tr>
+                <tr align="center">
+                    <td colspan="2" rowspan="1">
+                        <input value="Calcular" type="button" onclick="algoritmo();" />
+                        
+                    </td>
+                </tr>
+                <tr id="Soluciones">
+                    <td>
+                        <label for="raiz">Valor de raiz:</label>
+                    </td>
+                    <td>
+                        <input name="raiz" step="0.000001" type="number" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="x1">Valor de x1:</label>
+                    </td>
+                    <td>
+                        <input name="x1" step="0.000001" type="number" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="x2">Valor de x2:</label>
+                    </td>
+                    <td>
+                        <input name="x2" step="0.000001" type="number" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+
+</html>
